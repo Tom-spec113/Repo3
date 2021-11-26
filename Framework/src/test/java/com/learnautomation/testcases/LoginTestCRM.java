@@ -14,6 +14,8 @@ public class LoginTestCRM extends BaseClass {
 
 	LoginPage lp;
 
+	
+/*Test 1*/
 	@Test
 	public void loginApp1() throws IOException {
 
@@ -25,7 +27,9 @@ public class LoginTestCRM extends BaseClass {
 		Assert.assertEquals(pt, "OrangeHRM ");
 		
 	}
-
+	
+	
+/*Test 2*/
 	@Test
 	public void chckPageTitle() {
 

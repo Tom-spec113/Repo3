@@ -24,7 +24,7 @@ public class LoginTestCRM extends BaseClass {
 		lp = new LoginPage(driver);
 		logger.info("Application is started");
 		String pt = lp.loginToCRM(edp.getStringData(0, 0, 0), edp.getStringData(0, 0, 1));
-		Assert.assertEquals(pt, "OrangeHRM ");
+		Assert.assertEquals(pt, "OrangeHRM");
 		
 	}
 	

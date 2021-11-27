@@ -14,6 +14,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -54,11 +55,14 @@ public class BaseClass {
 	}
 
 	@BeforeClass
-	public void setUp() {
+	@Parameters({"browser","Url"})
+	public void setUp(String browser, String Url) {
 		
 		Reporter.log("Before Class Method execution started", true);
+		
+		driver = BrowserFactory.startApplication(driver, browser, Url);
 
-		driver = BrowserFactory.startApplication(driver, cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));
+	//	driver = BrowserFactory.startApplication(driver, cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));
 		
 		Reporter.log("Before Class Method execution started", true);
 	}

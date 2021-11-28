@@ -28,7 +28,7 @@ public class ExcelDataProvider {
 		return wb.getSheetAt(sn).getRow(row).getCell(col).getStringCellValue();
 
 	}
-	
+	//My central repository change edit
 	public double getNumericData(int sn, int row, int col) {
 		
 		return wb.getSheetAt(sn).getRow(row).getCell(col).getNumericCellValue();

@@ -16,6 +16,7 @@ public class ExcelDataProvider {
 		File f = new File("./TestData/Book1.xlsx");
 		FileInputStream fs = new FileInputStream(f);
 		wb = new XSSFWorkbook(fs);
+		System.out.println("Excel workbook object initialized");
 		}
 		catch(IOException e) {
 			e.printStackTrace();

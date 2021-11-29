@@ -21,7 +21,9 @@ public class ExcelDataProvider {
 		System.out.println("Excel workbook object initialized");
 		}
 		catch(IOException e) {
-			e.getMessage();
+
+			e.printStackTrace();
+
 		}
 
 	}

@@ -29,7 +29,7 @@ public class UtilityMethods {
 	}
 	
 
-	
+	/*Below method is a data provider method*/
 	@DataProvider(name="testdata")
 	public Object[][] readDataFromExcel() {
 		

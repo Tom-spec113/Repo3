@@ -17,12 +17,12 @@ public class TestNGListener implements ITestListener {
 	}
 
 	public void onTestStart(ITestResult result) {
-		System.out.println("Test is now started. Thiss Test name is " + result.getName());
+		System.out.println("Test is now started. This Test name is " + result.getName());
 
 	}
 
 	public void onTestSuccess(ITestResult result) {
-		System.out.println("Test got passed. Thiss Test name is " + result.getName());
+		System.out.println("Test got passed. This Test name is " + result.getName());
 
 	}
 }

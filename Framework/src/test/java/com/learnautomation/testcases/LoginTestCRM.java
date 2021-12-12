@@ -11,28 +11,29 @@ import com.learnautomation.pages.LoginPage;
 
 //@Listeners(com.learnautomation.utility.TestNGListener.class)
 public class LoginTestCRM extends BaseClass {
-	
+
 	protected LoginPage lp;
-	
-/*Test 1*/
+
+	/* Test 1 */
 	@Test
 	public void loginApp1() throws IOException {
 
-		logger = er.createTest("loginApp1").assignCategory("Regression").assignAuthor("Mayuresh").assignDevice("Windows");
+		logger = er.createTest("loginApp1").assignCategory("Regression").assignAuthor("Mayuresh")
+				.assignDevice("Windows");
 
 		lp = new LoginPage(driver);
 		logger.info("Application is started");
 		String pt = lp.loginToCRM(edp.getStringData(0, 0, 0), edp.getStringData(0, 0, 1));
 		Assert.assertEquals(pt, "OrangeHRM");
-		
+
 	}
-	
-	
-/*Test 2*/
+
+	/* Test 2 */
 	@Test
 	public void chckPageTitle() {
 
-		logger = er.createTest("chckPageTitle").assignCategory("Regression").assignAuthor("Mayuresh").assignDevice("Windows");
+		logger = er.createTest("chckPageTitle").assignCategory("Regression").assignAuthor("Mayuresh")
+				.assignDevice("Windows");
 
 		lp = new LoginPage(driver);
 		lp.getInnerHtmlForUname();

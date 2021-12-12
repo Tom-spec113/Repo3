@@ -31,42 +31,42 @@ public class BaseClass {
 	protected static WebDriver driver;
 	protected static ConfigDataReader cdr;
 	protected static ExcelDataProvider edp;
-	
+
 	protected ExtentSparkReporter reporter;
 	protected ExtentReports er;
 	protected ExtentTest logger;
-	
+
 	@BeforeSuite
 	public void setUpSuite() {
-		
+
 		Reporter.log("Before Suite Method execution started", true);
-		
-		driver=null;
+
+		driver = null;
 		cdr = new ConfigDataReader();
 		edp = new ExcelDataProvider();
-		reporter = new ExtentSparkReporter(System.getProperty("user.dir")+
-				"/Reports/ExtentReport "+UtilityMethods.getCurrentDateTime()+".html");
-		//reporter.config().setTheme(Theme.DARK);
+		reporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/Reports/ExtentReport "
+				+ UtilityMethods.getCurrentDateTime() + ".html");
+		// reporter.config().setTheme(Theme.DARK);
 		er = new ExtentReports();
 		er.attachReporter(reporter);
-		
+
 		Reporter.log("Before Suite Method execution Ended", true);
-		
+
 	}
 
 	@BeforeClass
-	@Parameters({"browser","Url"})
+	@Parameters({ "browser", "Url" })
 	public void setUp(String browser, String Url) {
-		
+
 		Reporter.log("Before Class Method execution started", true);
-		
+
 		driver = BrowserFactory.startApplication(driver, browser, Url);
 
-	//	driver = BrowserFactory.startApplication(driver, cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));
-		
+		// driver = BrowserFactory.startApplication(driver,
+		// cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));
+
 		Reporter.log("Before Class Method execution ended", true);
 	}
-	
 
 	@AfterClass
 	public void tearDown() {
@@ -75,24 +75,21 @@ public class BaseClass {
 
 	}
 
-	
 	@AfterMethod
 	public void tearDownAfterMethodFailure(ITestResult itr) {
-		
-		String sp = UtilityMethods.captureScreenshot(driver, driver.getTitle());
-		
-		if(itr.getStatus() == ITestResult.FAILURE) {
-			
-			logger.fail(itr.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(sp).build());			
-		}
-		else if(itr.getStatus() == ITestResult.SUCCESS) {
-			
-			logger.pass(itr.getName()+" is passed.", MediaEntityBuilder.createScreenCaptureFromPath(sp).build());
-		}
-		
-		er.flush();
-		
-	}
 
+		String sp = UtilityMethods.captureScreenshot(driver, driver.getTitle());
+
+		if (itr.getStatus() == ITestResult.FAILURE) {
+
+			logger.fail(itr.getThrowable().getMessage(), MediaEntityBuilder.createScreenCaptureFromPath(sp).build());
+		} else if (itr.getStatus() == ITestResult.SUCCESS) {
+
+			logger.pass(itr.getName() + " is passed.", MediaEntityBuilder.createScreenCaptureFromPath(sp).build());
+		}
+
+		er.flush();
+
+	}
 
 }

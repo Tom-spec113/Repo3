@@ -28,14 +28,13 @@ public class ExcelDataProvider {
 
 	}
 	
-	//My Local change edit
 
 	public String getStringData(int sn, int row, int col) {
 
 		return wb.getSheetAt(sn).getRow(row).getCell(col).getStringCellValue();
 
 	}
-	//My central repository change edit
+
 	public double getNumericData(int sn, int row, int col) {
 		
 		return wb.getSheetAt(sn).getRow(row).getCell(col).getNumericCellValue();

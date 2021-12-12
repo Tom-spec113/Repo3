@@ -12,17 +12,17 @@ public class BrowserFactory {
 
 	public static WebDriver startApplication(WebDriver driver, String browserName, String appURL) {
 
-		if (browserName.equals("Chrome")) {
+		if (browserName.equalsIgnoreCase("Chrome")) {
 
 			System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 
-		} else if (browserName.equals("Firefox")) {
+		} else if (browserName.equalsIgnoreCase("Firefox")) {
 			
 			System.setProperty("webdriver.gecko.driver", "./Drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 
-		} else if(browserName.equals("Edge")) {
+		} else if(browserName.equalsIgnoreCase("Edge")) {
 			
 			System.setProperty("webdriver.edge.driver", "./Drivers/msedgedriver.exe");
 			driver = new EdgeDriver();

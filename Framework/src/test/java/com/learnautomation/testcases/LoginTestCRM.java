@@ -11,9 +11,8 @@ import com.learnautomation.pages.LoginPage;
 
 //@Listeners(com.learnautomation.utility.TestNGListener.class)
 public class LoginTestCRM extends BaseClass {
-
-	LoginPage lp;
-
+	
+	protected LoginPage lp;
 	
 /*Test 1*/
 	@Test
@@ -36,7 +35,7 @@ public class LoginTestCRM extends BaseClass {
 		logger = er.createTest("chckPageTitle").assignCategory("Regression").assignAuthor("Mayuresh").assignDevice("Windows");
 
 		lp = new LoginPage(driver);
-		Assert.assertEquals(driver.getTitle(), "OrangeHRM");
+		lp.getInnerHtmlForUname();
 
 	}
 

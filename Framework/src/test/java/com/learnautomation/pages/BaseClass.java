@@ -64,7 +64,7 @@ public class BaseClass {
 
 	//	driver = BrowserFactory.startApplication(driver, cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));
 		
-		Reporter.log("Before Class Method execution started", true);
+		Reporter.log("Before Class Method execution ended", true);
 	}
 	
 
@@ -74,6 +74,7 @@ public class BaseClass {
 		BrowserFactory.quitBrowser(driver);
 
 	}
+
 	
 	@AfterMethod
 	public void tearDownAfterMethodFailure(ITestResult itr) {
@@ -86,7 +87,7 @@ public class BaseClass {
 		}
 		else if(itr.getStatus() == ITestResult.SUCCESS) {
 			
-			logger.pass(MediaEntityBuilder.createScreenCaptureFromPath(sp).build());
+			logger.pass(itr.getName()+" is passed.", MediaEntityBuilder.createScreenCaptureFromPath(sp).build());
 		}
 		
 		er.flush();

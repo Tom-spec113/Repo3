@@ -1,5 +1,6 @@
 package com.learnautomation.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -39,8 +40,14 @@ public class LoginPage {
 		 catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		
 		return driver.getTitle();
 		//pswd.sendKeys(password);
 		//pswdnxtbtn.click();
+	}
+	
+	public void getInnerHtmlForUname() {
+		
+		System.out.println(emailadress.getAttribute("innerHTML"));
 	}
 }

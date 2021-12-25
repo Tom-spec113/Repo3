@@ -4,6 +4,12 @@
   <artifactId>Framework</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+  <properties>
+  		<!-- 	<browser>chrome</browser>
+  			<Url>https://opensource-demo.orangehrmlive.com/</Url>
+  			<xmlfiles>testng.xml</xmlfiles> -->
+  </properties>
+  
   
   <dependencies>
 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->

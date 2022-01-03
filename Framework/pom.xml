@@ -53,13 +53,13 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
         <configuration>
-        <suiteXmlFiles>
+     <!--     <suiteXmlFiles>
         <suiteXmlFile>XMLFiles/${xmlfiles}</suiteXmlFile>
         </suiteXmlFiles>
         <systemPropertyVariables>
             <propertyName>${browser}</propertyName>
            <propertyName>${Url}</propertyName>
-          </systemPropertyVariables>
+          </systemPropertyVariables> -->
         </configuration>
       </plugin>
 </plugins>

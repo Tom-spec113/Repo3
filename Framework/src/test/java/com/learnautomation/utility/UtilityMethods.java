@@ -66,18 +66,18 @@ public class UtilityMethods {
 
 	public static String captureScreenshot(WebDriver driver, String screenName) {
 
-		String path;
+		String path = System.getProperty("user.dir") + "/Screenshots/" + screenName + " " +getCurrentDateTime() + ".png";
+		File Dest = new File(path);;
 
 		TakesScreenshot ts = (TakesScreenshot) driver;
-		path = System.getProperty("user.dir") + "/Screenshots/" + screenName + getCurrentDateTime() + ".png";
 		try {
 			File f = ts.getScreenshotAs(OutputType.FILE);
-			FileHandler.copy(f, new File(path));
+			FileHandler.copy(f, Dest);
 		} catch (IOException e) {
 			e.getStackTrace();
 		}
-
-		return path;
+		
+		return Dest.getAbsolutePath();
 	}
 
 	public static String getCurrentDateTime() {

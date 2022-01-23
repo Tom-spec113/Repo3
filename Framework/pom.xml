@@ -56,14 +56,19 @@
         <suiteXmlFiles>
         <suiteXmlFile>XMLFiles/${xmlfiles}</suiteXmlFile>
         </suiteXmlFiles>
-      <!--  <systemPropertyVariables>
-            <propertyName>${browser}</propertyName>
-           <propertyName>${Url}</propertyName>
-          </systemPropertyVariables> -->
+         <systemPropertyVariables>
+            <appbrowser>${browser}</appbrowser>
+           <appurl>${Url}</appurl>
+          </systemPropertyVariables>
         </configuration>
       </plugin>
 </plugins>
 </build>
+  
+<properties>
+<xmlfiles>testng.xml</xmlfiles>
+</properties>
+  
   
   
   

@@ -46,7 +46,7 @@
 
 </dependencies>
   
-  <build>
+    <build>
   <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -56,15 +56,18 @@
         <suiteXmlFiles>
         <suiteXmlFile>XMLFiles/${xmlfiles}</suiteXmlFile>
         </suiteXmlFiles>
-      <!--  <systemPropertyVariables>
-            <propertyName>${browser}</propertyName>
-           <propertyName>${Url}</propertyName>
-          </systemPropertyVariables> -->
+       	<systemPropertyVariables>
+            <browserapp>${browser}</browserapp>
+           <appurl>${Url}</appurl>
+         </systemPropertyVariables>  
         </configuration>
       </plugin>
 </plugins>
-</build>
-  
+</build>  
+
+  <properties>
+		<xmlfiles>testng.xml</xmlfiles>
+</properties> 
   
   
   

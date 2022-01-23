@@ -61,6 +61,8 @@ public class BaseClass {
 		Reporter.log("Before Class method execution started", true);
 
 		driver = BrowserFactory.startApplication(driver, browser, Url);
+		
+	//	driver = BrowserFactory.startApplication(driver, System.getProperty("browser"), System.getProperty("Url"));
 
 		// driver = BrowserFactory.startApplication(driver,
 		// cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));

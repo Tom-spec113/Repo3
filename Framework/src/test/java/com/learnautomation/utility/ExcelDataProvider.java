@@ -15,8 +15,6 @@ public class ExcelDataProvider {
 		try {
 		File f = new File("./TestData/Book1.xlsx");
 		FileInputStream fs = new FileInputStream(f);
-		
-		System.out.println("This line added from my local repo");
 		wb = new XSSFWorkbook(fs);
 		System.out.println("Excel workbook object initialized");
 		}

@@ -17,6 +17,7 @@ public class ConfigDataReader {
 		FileInputStream fis = new FileInputStream(f);
 		p = new Properties();
 		p.load(fis);
+		System.out.println("Properties have been loaded");
 		}
 		catch(IOException e) {
 			e.printStackTrace();

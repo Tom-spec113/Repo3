@@ -24,7 +24,7 @@
 <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
-    <version>7.1.0</version>
+    <version>7.5.1</version>
     <scope>test</scope>
 </dependency>
 
@@ -62,14 +62,19 @@
         <suiteXmlFiles>
         <suiteXmlFile>XMLFiles/${xmlfiles}</suiteXmlFile>
         </suiteXmlFiles>
-        <systemPropertyVariables>
-            <propertyName>${browser}</propertyName>
-           <propertyName>${Url}</propertyName>
+         <systemPropertyVariables>
+         <!--    <appbrowser>${browser}</appbrowser>
+           <appurl>${Url}</appurl> -->
           </systemPropertyVariables>
         </configuration>
       </plugin>
 </plugins>
 </build>
+  
+<properties>
+<xmlfiles>testng.xml</xmlfiles>
+</properties>
+  
   
   
   

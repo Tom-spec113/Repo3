@@ -39,7 +39,7 @@ public class BaseClass {
 	@BeforeSuite
 	public void setUpSuite() {
 
-		Reporter.log("Before Suite Method execution started", true);
+		Reporter.log("Before Suite method execution started", true);
 
 		driver = null;
 		cdr = new ConfigDataReader();
@@ -50,33 +50,39 @@ public class BaseClass {
 		er = new ExtentReports();
 		er.attachReporter(reporter);
 
-		Reporter.log("Before Suite Method execution Ended", true);
+		Reporter.log("Before Suite method execution Ended", true);
 
 	}
 
 	@BeforeClass
 	@Parameters({ "browser", "Url" })
-	public void setUp(String browser, String Url) {
+	public void setUpClass(String browser, String Url) {
 
-		Reporter.log("Before Class Method execution started", true);
+		Reporter.log("Before Class method execution started", true);
 
 		driver = BrowserFactory.startApplication(driver, browser, Url);
 
 		// driver = BrowserFactory.startApplication(driver,
 		// cdr.getConfigParam("Browser"), cdr.getConfigParam("Url"));
 
-		Reporter.log("Before Class Method execution ended", true);
+		Reporter.log("Before Class method execution ended", true);
 	}
 
 	@AfterClass
-	public void tearDown() {
+	public void tearDownClass() {
+		
+		Reporter.log("After Class method execution started", true);
 
 		BrowserFactory.quitBrowser(driver);
+		
+		Reporter.log("After Class method execution ended", true);
 
 	}
 
 	@AfterMethod
 	public void tearDownAfterMethodFailure(ITestResult itr) {
+		
+		Reporter.log("After Method method execution started", true);
 
 		String sp = UtilityMethods.captureScreenshot(driver, driver.getTitle());
 
@@ -89,6 +95,8 @@ public class BaseClass {
 		}
 
 		er.flush();
+		
+		Reporter.log("After Method method execution ended", true);
 
 	}
 

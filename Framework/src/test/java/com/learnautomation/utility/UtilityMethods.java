@@ -28,7 +28,7 @@ public class UtilityMethods {
 	}
 
 	/* Below method is a data provider method */
-	@DataProvider(name = "testdata")
+	@DataProvider(name = "testdata", parallel=true)
 	public Object[][] readDataFromExcel() {
 
 		try {

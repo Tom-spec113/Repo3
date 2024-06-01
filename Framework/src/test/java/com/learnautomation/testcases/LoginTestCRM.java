@@ -10,6 +10,7 @@ import com.learnautomation.pages.BaseClass;
 import com.learnautomation.pages.LoginPage;
 
 //@Listeners(com.learnautomation.utility.TestNGListener.class)
+//@Test(singleThreaded = true)
 public class LoginTestCRM extends BaseClass {
 
 	protected LoginPage lp;

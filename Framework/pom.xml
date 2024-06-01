@@ -57,8 +57,8 @@
         <suiteXmlFile>XMLFiles/${xmlfiles}</suiteXmlFile>
         </suiteXmlFiles>
          <systemPropertyVariables>
-            <appbrowser>${browser}</appbrowser>
-           <appurl>${Url}</appurl>
+         <!--    <appbrowser>${browser}</appbrowser>
+           <appurl>${Url}</appurl> -->
           </systemPropertyVariables>
         </configuration>
       </plugin>

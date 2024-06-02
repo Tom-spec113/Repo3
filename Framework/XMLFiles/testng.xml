@@ -4,7 +4,7 @@
 
 	<suite-files>
 		<!-- <suite-file path="./XMLFiles/testB.xml"></suite-file> -->
-		<suite-file path="./XMLFiles/testA.xml"></suite-file>
+		<!-- <suite-file path="./XMLFiles/testA.xml"></suite-file> -->
 	</suite-files>
 
 <!--  <listeners>
@@ -12,12 +12,13 @@
 	<listener class-name="com.learnautomation.utility.TestNGListener"></listener>
 
 </listeners> -->
-   <parameter name="browser" value="chrome"></parameter>
-	<parameter name="Url" value="https://opensource-demo.orangehrmlive.com"></parameter> 
 
- <!-- <test name="Test">
+   <parameter name="browser" value="chrome"></parameter>
+<parameter name="Url" value="https://opensource-demo.orangehrmlive.com"></parameter> 
+
+  <test name="Test">
     <classes>
       <class name="com.learnautomation.testcases.LoginTestCRM"/>
     </classes>
-  </test>  Test -->
+  </test>  Test 
 </suite> <!-- Suite -->

@@ -90,4 +90,9 @@ protected void testInvocationCount12() {
 	
 }
 
+@Test//(invocationCount=13)
+protected void testInvocationCount13() {
+	System.out.println("Execute testInvocationCount13 10 times");
+}
+
 }
